@@ -1,0 +1,37 @@
+@import "../base/variables";
+@import "../base/mixins";
+@import "../base/extends";
+@import "../base/maps";
+div main{
+    grid-area: main;
+    text-align: center;
+    //mixin--------------------------------------------------------------------
+    @include flex(column);
+    .container{
+        //mixin--------------------------------------------------------------------
+        @include flex(row);
+        //extend--------------------------------------------------------------------
+        @extend %mainContainer;
+        .image{
+            //maps--------------------------------------------------------------------
+            background-size: map-get($bgContainerImg, bg-size);
+            background-repeat: map-get($bgContainerImg, bg-repeat);
+            //observar ruta
+            background-image: map-get($bgContainerImg, bg-imagen);
+            //variables
+            height: nth($img_bgCat-sizeH, 3);
+            width: nth($img_bgCat-sizeW, 3);
+            border-radius: 20px;
+            margin-top: 10px;
+        }
+        .txtDescripcion{
+            color: $txtDescripcion-color;
+        }
+        .txtDescripcionDark{
+            color: $txtDescripcionDark-color;
+        }
+    }
+    .accordion-widht{
+        width: 70%;
+    }
+}
