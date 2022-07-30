@@ -123,8 +123,6 @@ div main .container .image {
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url("../img/background_img.svg");
-  height: 400px;
-  width: 400px;
   border-radius: 20px;
   margin-top: 10px;
 }
@@ -152,7 +150,7 @@ div aside div {
   bottom: 0;
 }
 div aside div .up_down {
-  margin: 20px;
+  margin-top: 20px;
   width: 50%;
 }
 
@@ -205,6 +203,7 @@ div footer div a img {
   }
   div aside div .up_down {
     width: 10%;
+    margin: 20px;
   }
   .image {
     height: 200px;
@@ -232,6 +231,13 @@ div footer div a img {
   }
   h2 {
     font-size: 2.5rem;
+  }
+}
+/* Desktop */
+@media (min-width: 768px) {
+  .image {
+    height: 400px;
+    width: 400px;
   }
 }
 

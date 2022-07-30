@@ -37,6 +37,7 @@
         div{
             .up_down{
                 width: nth($up_down-size,1);
+                margin: 20px;
             }
         }
     }
@@ -69,5 +70,14 @@
 
     h2{
         font-size: nth($h2-size, 2);
+    }
+}
+/* Desktop */
+@media(min-width:768px)
+{
+    .image{
+        //variables
+        height: nth($img_bgCat-sizeH, 3);
+        width: nth($img_bgCat-sizeW, 3);
     }
 }
